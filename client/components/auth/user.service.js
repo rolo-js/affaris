@@ -21,7 +21,7 @@ function UserResource($resource) {
   });
 }
 
-angular.module('v3App.auth')
+angular.module('affarisApp.auth')
   .factory('User', UserResource);
 
 })();

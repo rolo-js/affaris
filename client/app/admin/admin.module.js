@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('v3App.admin', [
-  'v3App.auth',
+angular.module('affarisApp.admin', [
+  'affarisApp.auth',
   'ui.router'
 ]);

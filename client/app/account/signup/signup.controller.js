@@ -39,5 +39,5 @@ class SignupController {
   }
 }
 
-angular.module('v3App')
+angular.module('affarisApp')
   .controller('SignupController', SignupController);

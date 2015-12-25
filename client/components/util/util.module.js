@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('v3App.util', []);
+angular.module('affarisApp.util', []);

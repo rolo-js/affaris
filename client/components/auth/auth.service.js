@@ -183,7 +183,7 @@ function AuthService($location, $http, $cookies, $q, appConfig, Util, User) {
   return Auth;
 }
 
-angular.module('v3App.auth')
+angular.module('affarisApp.auth')
   .factory('Auth', AuthService);
 
 })();

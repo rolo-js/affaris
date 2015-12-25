@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('v3App')
+angular.module('affarisApp')
   .directive('oauthButtons', function() {
     return {
       templateUrl: 'components/oauth-buttons/oauth-buttons.html',

@@ -1,9 +1,9 @@
 'use strict';
 
-angular.module('v3App', [
-  'v3App.auth',
-  'v3App.admin',
-  'v3App.constants',
+angular.module('affarisApp', [
+  'affarisApp.auth',
+  'affarisApp.admin',
+  'affarisApp.constants',
   'ngCookies',
   'ngResource',
   'ngSanitize',

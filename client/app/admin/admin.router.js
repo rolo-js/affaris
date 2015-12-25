@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('v3App.admin')
+angular.module('affarisApp.admin')
   .config(function($stateProvider) {
     $stateProvider
       .state('admin', {

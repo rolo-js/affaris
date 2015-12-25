@@ -6,7 +6,7 @@ module.exports = {
 
   // MongoDB connection options
   mongo: {
-    uri: 'mongodb://localhost/v3-dev'
+    uri: 'mongodb://localhost/affaris-dev'
   },
 
   // Seed database on startup

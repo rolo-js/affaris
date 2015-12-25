@@ -27,5 +27,5 @@ class SettingsController {
   }
 }
 
-angular.module('v3App')
+angular.module('affarisApp')
   .controller('SettingsController', SettingsController);

@@ -3,7 +3,7 @@
 describe('Controller: MainController', function() {
 
   // load the controller's module
-  beforeEach(module('v3App'));
+  beforeEach(module('affarisApp'));
   beforeEach(module('stateMock'));
   beforeEach(module('socketMock'));
 

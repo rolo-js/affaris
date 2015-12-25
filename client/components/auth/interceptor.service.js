@@ -26,7 +26,7 @@ function authInterceptor($rootScope, $q, $cookies, $injector, Util) {
   };
 }
 
-angular.module('v3App.auth')
+angular.module('affarisApp.auth')
   .factory('authInterceptor', authInterceptor);
 
 })();

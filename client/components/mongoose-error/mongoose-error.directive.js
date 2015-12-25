@@ -3,7 +3,7 @@
 /**
  * Removes server error when user updates input
  */
-angular.module('v3App')
+angular.module('affarisApp')
   .directive('mongooseError', function() {
     return {
       restrict: 'A',

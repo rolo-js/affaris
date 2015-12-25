@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('v3App')
+angular.module('affarisApp')
   .directive('navbar', () => ({
     templateUrl: 'components/navbar/navbar.html',
     restrict: 'E',

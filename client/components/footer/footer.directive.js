@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('v3App')
+angular.module('affarisApp')
   .directive('footer', function () {
     return {
       templateUrl: 'components/footer/footer.html',

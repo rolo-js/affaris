@@ -31,5 +31,5 @@ class LoginController {
   }
 }
 
-angular.module('v3App')
+angular.module('affarisApp')
   .controller('LoginController', LoginController);

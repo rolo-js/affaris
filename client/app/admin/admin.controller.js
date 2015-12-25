@@ -14,7 +14,7 @@ class AdminController {
   }
 }
 
-angular.module('v3App.admin')
+angular.module('affarisApp.admin')
   .controller('AdminController', AdminController);
 
 })();

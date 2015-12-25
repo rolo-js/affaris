@@ -53,7 +53,7 @@ function UtilService($window) {
   return Util;
 }
 
-angular.module('v3App.util')
+angular.module('affarisApp.util')
   .factory('Util', UtilService);
 
 })();

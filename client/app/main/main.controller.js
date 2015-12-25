@@ -30,7 +30,7 @@ class MainController {
   }
 }
 
-angular.module('v3App')
+angular.module('affarisApp')
   .controller('MainController', MainController);
 
 })();

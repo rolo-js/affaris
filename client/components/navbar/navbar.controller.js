@@ -17,5 +17,5 @@ class NavbarController {
   }
 }
 
-angular.module('v3App')
+angular.module('affarisApp')
   .controller('NavbarController', NavbarController);
