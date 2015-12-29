@@ -1,0 +1,7 @@
+div.btn-group(uib-dropdown)
+  button.btn.btn-default(type="button",uib-dropdown-toggle)
+    | {{currentLocaleDisplayName}} &nbsp;
+    span.caret
+  ul.uib-dropdown-menu
+    li(ng-repeat="lang in localesDisplayNames")
+      a(href="#",ng-click="changeLanguage(lang)") {{lang}}
