@@ -4,6 +4,7 @@ angular.module('affarisApp', [
   'affarisApp.auth',
   'affarisApp.admin',
   'affarisApp.constants',
+  'affarisApp.translate',
   'ngCookies',
   'ngResource',
   'ngSanitize',
