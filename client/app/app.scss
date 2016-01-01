@@ -8,6 +8,12 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
  * App-wide Styles
  */
 
+body{
+  font-family:"Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #E2E2E7;
+  padding-top: 90px;
+}
+
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
@@ -19,6 +25,7 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
 // injector
 @import 'admin/admin.scss';
 @import 'main/main.scss';
+@import 'project/project.scss';
 @import '../components/footer/footer.scss';
 @import '../components/modal/modal.scss';
 @import '../components/oauth-buttons/oauth-buttons.scss';
