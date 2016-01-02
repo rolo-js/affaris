@@ -44,5 +44,12 @@ angular.module('affarisApp')
         resolve:{
           $title: function($stateParams) {return $stateParams.id }
         }
+      })
+      .state('project.detail.team',{
+        url:'/docs',
+        templateUrl: 'app/project/project_docs.html',
+        resolve:{
+          $title: function($stateParams) {return $stateParams.id }
+        }
       });
   });
