@@ -28,6 +28,8 @@ module.exports = function(config) {
       'client/bower_components/angular-translate-storage-local/angular-translate-storage-local.js',
       'client/bower_components/angular-translate-handler-log/angular-translate-handler-log.js',
       'client/bower_components/angular-dynamic-locale/src/tmhDynamicLocale.js',
+      'client/bower_components/ui-router-extras/release/ct-ui-router-extras.js',
+      'client/bower_components/angular-ui-router-title/angular-ui-router-title.js',
       'client/bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'node_modules/socket.io-client/socket.io.js',
