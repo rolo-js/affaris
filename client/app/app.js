@@ -11,7 +11,9 @@ angular.module('affarisApp', [
   'btford.socket-io',
   'ui.router',
   'ui.bootstrap',
-  'validation.match'
+  'validation.match',
+  'ct.ui.router.extras',
+  'ui.router.title'
 ])
   .config(function($urlRouterProvider, $locationProvider) {
     $urlRouterProvider

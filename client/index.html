@@ -1,15 +1,17 @@
-<!doctype html>
+<!doctype html >
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" ng-app="affarisApp"> <!--<![endif]-->
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <base href="/">
-    <title></title>
+    <title ng-cloak>{{$title}}{{$title ? ' - ' : ''}}Affaris</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
+      <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(client) app/vendor.css -->
       <!-- bower:css -->
@@ -21,11 +23,11 @@
       <!-- endinjector -->
     <!-- endbuild -->
   </head>
-  <body ng-app="affarisApp">
+  <body >
     <!--[if lt IE 7]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
+    <navbar></navbar>
     <!-- Add your site or application content here -->
     <div ui-view=""></div>
 
@@ -62,6 +64,8 @@
       <script src="bower_components/angular-translate-storage-local/angular-translate-storage-local.js"></script>
       <script src="bower_components/angular-translate-handler-log/angular-translate-handler-log.js"></script>
       <script src="bower_components/angular-dynamic-locale/src/tmhDynamicLocale.js"></script>
+      <script src="bower_components/ui-router-extras/release/ct-ui-router-extras.js"></script>
+      <script src="bower_components/angular-ui-router-title/angular-ui-router-title.js"></script>
       <!-- endbower -->
       <script src="socket.io-client/socket.io.js"></script>
     <!-- endbuild -->
@@ -72,17 +76,19 @@
       <script src="components/auth/auth.module.js"></script>
       <script src="components/translate/translate.module.js"></script>
       <script src="components/util/util.module.js"></script>
-      <script src="components/auth/user.service.js"></script>
+      <script src="components/auth/router.decorator.js"></script>
       <script src="app/account/account.js"></script>
       <script src="app/admin/admin.router.js"></script>
       <script src="app/app.constant.js"></script>
       <script src="app/main/main.controller.js"></script>
       <script src="app/main/main.js"></script>
+      <script src="app/project/project.controller.js"></script>
+      <script src="app/project/project.js"></script>
       <script src="app/account/settings/settings.controller.js"></script>
       <script src="components/auth/auth.service.js"></script>
       <script src="components/auth/interceptor.service.js"></script>
-      <script src="components/auth/router.decorator.js"></script>
       <script src="app/account/login/login.controller.js"></script>
+      <script src="components/auth/user.service.js"></script>
       <script src="components/footer/footer.directive.js"></script>
       <script src="components/modal/modal.service.js"></script>
       <script src="components/mongoose-error/mongoose-error.directive.js"></script>
@@ -94,6 +100,7 @@
       <script src="components/translate/LocaleService/LocaleService.service.js"></script>
       <script src="components/translate/languageSelector/languageSelector.directive.js"></script>
       <script src="app/account/signup/signup.controller.js"></script>
+      <script src="components/uiSrefActiveIf/uiSrefActiveIf.directive.js"></script>
       <script src="app/admin/admin.controller.js"></script>
       <script src="components/util/util.service.js"></script>
       <!-- endinjector -->
