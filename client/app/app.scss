@@ -14,6 +14,36 @@ body{
   padding-top: 90px;
 }
 
+.view-wrapper{
+ position: relative;
+}
+ui-view.ng-enter, ui-view.ng-leave ,
+[ui-view].ng-enter, [ui-view].ng-leave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  transition: all 0.15s ease-out;
+}
+ui-view.ng-enter ,
+[ui-view].ng-enter {
+  opacity: 0;
+}
+
+ui-view.ng-enter-active,
+[ui-view].ng-enter-active {
+  opacity: 1;
+}
+ui-view.ng-leave,
+[ui-view].ng-leave {
+  opacity: 1;
+}
+ui-view.ng-leave-active,
+[ui-view].ng-leave-active {
+  opacity: 0;
+}
+
+
+
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
@@ -24,6 +54,7 @@ body{
 // Component styles are injected through grunt
 // injector
 @import 'admin/admin.scss';
+@import 'catalogs/service/service.scss';
 @import 'main/main.scss';
 @import 'project/project.scss';
 @import '../components/footer/footer.scss';

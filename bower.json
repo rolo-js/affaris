@@ -25,7 +25,8 @@
     "angular-dynamic-locale": "~0.1.29",
     "ui-router-extras": "~0.1.0",
     "angular-ui-router-title": "~0.0.4",
-    "angular-ui-grid": "~3.0.7"
+    "angular-ui-grid": "~3.0.7",
+    "angular-animate": "~1.4.8"
   },
   "devDependencies": {
     "angular-mocks": "~1.4.0"
