@@ -8,6 +8,75 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
  * App-wide Styles
  */
 
+body{
+  font-family:"Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #E2E2E7;
+  padding-top: 90px;
+}
+
+	*::-webkit-scrollbar {
+		-webkit-overflow-scrolling: touch;
+		height: 15px;
+		width: 15px;
+	 }
+	*::-webkit-scrollbar-button:start:decrement,
+	*::-webkit-scrollbar-button:end:increment {
+		background: transparent;
+		display: block;
+		height: 0;
+	}
+	*::-webkit-scrollbar-track {
+
+    background-clip: padding-box;
+    // border-width: 0 0 0 4px;
+    // border: solid black;
+    background-color: transparent;
+  }
+  *::-webkit-scrollbar-thumb {
+		background-clip: padding-box;
+    border: 1px solid transparent;
+    border-width: 0 0 0 5px;
+    background-color: #e2e2e7;
+  }
+	body::-webkit-scrollbar-thumb {
+
+    background-clip: padding-box;
+    // border-width: 0 0 0 4px;
+    // border: solid black;
+    background-color: #d2d2d7;
+  }
+
+
+.view-wrapper{
+ position: relative;
+}
+ui-view.ng-enter, ui-view.ng-leave ,
+[ui-view].ng-enter, [ui-view].ng-leave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  transition: all 0.15s ease-out;
+}
+ui-view.ng-enter ,
+[ui-view].ng-enter {
+  opacity: 0;
+}
+
+ui-view.ng-enter-active,
+[ui-view].ng-enter-active {
+  opacity: 1;
+}
+ui-view.ng-leave,
+[ui-view].ng-leave {
+  opacity: 1;
+}
+ui-view.ng-leave-active,
+[ui-view].ng-leave-active {
+  opacity: 0;
+}
+
+
+
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
@@ -18,8 +87,13 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
 // Component styles are injected through grunt
 // injector
 @import 'admin/admin.scss';
+@import 'catalogs/service/create/create.scss';
+@import 'catalogs/service/detail/detail.scss';
+@import 'catalogs/service/service.scss';
 @import 'main/main.scss';
+@import 'project/project.scss';
 @import '../components/footer/footer.scss';
 @import '../components/modal/modal.scss';
 @import '../components/oauth-buttons/oauth-buttons.scss';
+@import '../components/translate/languageSelector/languageSelector.scss';
 // endinjector

@@ -1,0 +1,30 @@
+{
+  "directives.language-select.Language": "Idioma",
+  "Inicio": "Inicio",
+  "Login": "Iniciar Sesión",
+  "Logout": "Finalizar Sesión",
+  "Proyectos": "Proyectos",
+  "Servicios": "Servicios",
+  "SeleccioneOBusque": "Seleccione o búsque...",
+  "Filtros": "Filtros",
+  "Agregar": "Agregar",
+  "Reportes": "Reportes",
+  "Usuarios": "Usuarios",
+  "Clientes": "Clientes",
+  "Configuracion": "Configuración",
+  "Tareas": "Tareas",
+  "Registro":"Registro",
+
+  "Tokens.Generales":"***********************",
+  "Salvar": "Salvar",
+  "Cancelar": "Cancelar",
+  "Crear": "Crear",
+  "Nuevo":"Nuevo",
+  "Nombre":"Nombre",
+    
+  "Tokens.Servicio":"***********************",
+  "Código":"Código",
+  "Servicio":"Servicio",
+  "Crear nuevo servicio":"Crear nuevo servicio"
+
+}
