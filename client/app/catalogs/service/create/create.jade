@@ -1,0 +1,26 @@
+.modal-header
+  button.close(type="button",ng-click="serviceModal.cancel()",aria-label="Close")
+    span(aria-hidden="true") &times;
+  h4.modal-title {{'Crear nuevo servicio' | translate}}
+.modal-body
+    form(novalidate,name="scf",id="scf")
+      div.form-group(ng-class="{'has-error':scf.scfCode.$dirty && scf.scfCode.$invalid}")
+        label(for="scfCode") {{'Código' | translate}}
+        input.form-control.af-uppercase(type="text",id="scfCode",name="scfCode"
+          maxlength="3",minlength="3",required,uniq-service-code
+          ng-model="serviceModal.newService.code",ng-model-options="{ updateOn: 'blur' }"
+          autocomplete="off")
+        p(ng-show="scf.scfCode.$dirty && scf.scfCode.$error.minlength",class="help-block") El código debe contener 3 caractéres.
+        p(ng-show="scf.scfCode.$dirty && scf.scfCode.$error.required" class="help-block") El código es requerido.
+        p(ng-show="scf.scfCode.$pending.servicecode" class="help-block") Checando.
+        p(ng-show="scf.scfCode.$error.servicecode" class="help-block") El codigo ya existe.
+
+      div.form-group(ng-class="{'has-error': scf.scfName.$dirty && scf.scfName.$invalid}")
+        label(for="scfName") {{'Nombre' | translate}}
+        input.form-control(type="text",id="scfName",name="scfName",required,
+          ng-model="serviceModal.newService.name")
+        p(ng-show="scf.scfName.$dirty && scf.scfName.$error.required" class="help-block") El nombre es requerido.
+
+.modal-footer
+  button.btn.btn-default(ng-click="serviceModal.cancel()") {{'Cancelar'| translate}}
+  button.btn.btn-primary(ng-click="serviceModal.ok()",ng-disabled="scf.$invalid || scf.scfCode.$pending.servicecode") {{'Crear'| translate}}

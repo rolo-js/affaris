@@ -13,7 +13,18 @@
   "Clientes": "Clientes",
   "Configuracion": "Configuración",
   "Tareas": "Tareas",
+  "Registro":"Registro",
+
+  "Tokens.Generales":"***********************",
   "Salvar": "Salvar",
   "Cancelar": "Cancelar",
-  "Registro":"Registro"
+  "Crear": "Crear",
+  "Nuevo":"Nuevo",
+  "Nombre":"Nombre",
+    
+  "Tokens.Servicio":"***********************",
+  "Código":"Código",
+  "Servicio":"Servicio",
+  "Crear nuevo servicio":"Crear nuevo servicio"
+
 }

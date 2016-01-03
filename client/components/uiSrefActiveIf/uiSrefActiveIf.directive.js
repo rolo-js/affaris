@@ -3,15 +3,15 @@
 angular.module('affarisApp')
   .directive('uiSrefActiveIf', ['$state', function($state) {
     return {
-        restrict: "A",
+        restrict: 'A',
         controller: ['$scope', '$element', '$attrs', function ($scope, $element, $attrs) {
             var state = $attrs.uiSrefActiveIf;
 
             function update() {
                 if ( $state.includes(state) || $state.is(state) ) {
-                    $element.addClass("active");
+                    $element.addClass('active');
                 } else {
-                    $element.removeClass("active");
+                    $element.removeClass('active');
                 }
             }
 

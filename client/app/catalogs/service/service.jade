@@ -1,1 +1,15 @@
-div This is the service view.
+.container
+  .row
+    .col-sm-6
+      div.panel.panel-default
+        div.panel-heading Todos los Servicios
+        div.panel-body
+          div(ui-grid="gridOptions",ui-grid-selection,ui-grid-save-state)
+    .col-sm-2.col-xs-4
+      div.panel.panel-info.text-center
+        a(ui-sref="service.dash.create")
+          div 
+            br
+            i.fa.fa-plus.fa-4x
+          div {{'Nuevo' | translate}}
+           

@@ -16,14 +16,14 @@ div.navbar.navbar-default.navbar-fixed-top(ng-controller='NavbarController')
           a(ui-sref=".project") {{'Proyectos' | translate}}
         li
           a(href="#") {{'Tareas' | translate}}
-        li.dropdown(ui-sref-active-if="admin")
-          a.dropdown-toggle(href="#",data-toggle="dropdown") 
+        li(ui-sref-active-if="admin", uib-dropdown)
+          a(href="#",uib-dropdown-toggle) 
             i.fa.fa-cog
-          ul.dropdown-menu
+          ul.uib-dropdown-menu
             li
               a(ui-sref="admin.users.dash") {{'Usuarios' | translate}}
             li
-              a(ui-sref="admin.services") {{'Servicios' | translate}}
+              a(ui-sref=".service") {{'Servicios' | translate}}
           
 
       ul.nav.navbar-nav.navbar-right

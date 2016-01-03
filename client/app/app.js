@@ -13,7 +13,11 @@ angular.module('affarisApp', [
   'ui.bootstrap',
   'validation.match',
   'ct.ui.router.extras',
-  'ui.router.title'
+  'ui.router.title',
+  'ngAnimate',
+  'ui.grid',
+  'ui.grid.selection',
+  'ui.grid.saveState'
 ])
   .config(function($urlRouterProvider, $locationProvider) {
     $urlRouterProvider
