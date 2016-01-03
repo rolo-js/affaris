@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('affarisApp')
-  .controller('ProjectCtrl', function ($scope, $state) {
+  .controller('ProjectCtrl', function ($scope) {
     $scope.message = 'Hello';
     // $scope.$on('$stateChangeSuccess', function(toState) {
     //   if ($state.includes("project") && !$state.is("project")) {

@@ -28,28 +28,28 @@ angular.module('affarisApp')
         url:'/{id}/detail',
         templateUrl: 'app/project/project_detail.html',
         deepStateRedirect : {default:'project.detail.info', params:true},
-        controller:function($scope,$state){ $scope.id = $state.params.id}
+        controller:function($scope,$state){ $scope.id = $state.params.id;}
       })
       .state('project.detail.info',{
         url:'/info',
         templateUrl: 'app/project/project_info.html',
-        controller:function($scope,$state){$scope.id = $state.params.id},
+        controller:function($scope,$state){$scope.id = $state.params.id;},
         resolve:{
-          $title: function($stateParams) {return $stateParams.id }
+          $title: function($stateParams) {return $stateParams.id ;}
         }
       })
       .state('project.detail.docs',{
         url:'/docs',
         templateUrl: 'app/project/project_docs.html',
         resolve:{
-          $title: function($stateParams) {return $stateParams.id }
+          $title: function($stateParams) {return $stateParams.id ;}
         }
       })
       .state('project.detail.team',{
         url:'/docs',
         templateUrl: 'app/project/project_docs.html',
         resolve:{
-          $title: function($stateParams) {return $stateParams.id }
+          $title: function($stateParams) {return $stateParams.id ;}
         }
       });
   });

@@ -13,8 +13,18 @@
   "Clientes": "Clients",
   "Configuracion": "Settings",
   "Tareas": "Tasks",
+  "Registro":"Sign Up",
+
+  "Tokens.Generales":"***********************",
   "Salvar": "Save",
   "Cancelar": "Cancel",
-  "Registro":"Sign Up"
+  "Crear": "Create",
+  "Nuevo":"New",
+  "Nombre":"Name",
+
+  "Tokens.Servicio":"***********************",
+  "Código":"Code",
+  "Servicio":"Service",
+  "Crear nuevo servicio":"Create new service"
 
 }

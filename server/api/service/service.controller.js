@@ -61,9 +61,17 @@ function removeEntity(res) {
 
 // Gets a list of Services
 export function index(req, res) {
-  Service.findAsync()
+  if (req.query.code){
+      Service.findOneAsync({code:req.query.code})
+      .then(handleEntityNotFound(res))
+      .then(responseWithResult(res))
+      .catch(handleError(res));
+  }
+  else{
+    Service.findAsync()
     .then(responseWithResult(res))
     .catch(handleError(res));
+  }
 }
 
 // Gets a single Service from the DB
