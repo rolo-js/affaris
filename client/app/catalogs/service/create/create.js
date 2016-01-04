@@ -15,9 +15,8 @@ angular.module('affarisApp')
                 });
                 modalInstance.result
                 .then(function(svc){
-                  $state.go('service.dash',{ id: svc._id});
-                }, function (argument) {
-                  $state.go('^',{id: ''});
+                  console.log('svc id ', svc._id)
+                  $state.go('service.dash',{ gotoId: svc._id});
                 });
         }],
         onExit:['$state',function($state){

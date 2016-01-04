@@ -11,8 +11,11 @@ angular.module('affarisApp')
         sticky:true
       })
       .state('service.dash',{
-        url: '/dash/:id',
+        url: '/dash',
         templateUrl:'app/catalogs/service/service.html',
+        params:{
+          gotoId:{ value:'', squash:true}
+        },
         sticky:true,
         resolve:{
           $title: function($translate) {

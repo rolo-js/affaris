@@ -3,9 +3,8 @@
 (function() {
 
   class ServiceCtrl {
-    constructor($scope, Service, $rootScope, $state, $stateParams, socket) {
+    constructor($scope, Service, $rootScope, $state, $stateParams, socket, $timeout) {
       this.services = [];
-      console.log('constructing servceCtrl');
       $scope.gridOptions = {
         enableRowSelection: true,
         enableRowHeaderSelection: false,
@@ -22,17 +21,29 @@
           displayName: 'Servicio',
           enableColumnMenu: false,
           cellTemplate: '<div  class="ui-grid-cell-contents"  title="TOOLTIP"> <a ui-sref="service.detail({id:row.entity._id})"> {{COL_FIELD CUSTOM_FILTERS}} </a></div>'
-        }]
+        }],
+        onRegisterApi : function(gridApi){
+          $scope.gridApi = gridApi;
+        }
       };
       $rootScope.$on('$stateChangeSuccess', function(evt, toState, params) {
-        if ($state.is(toState, 'service.dash')) {
+        if (toState.name== 'service.dash' && params.gotoId) {
+          $scope.navigateToId = params.gotoId;
         }
       });
 
 
       Service.query().$promise.then(response => {
         $scope.gridOptions.data = response;
-        socket.syncUpdates('service', $scope.gridOptions.data);
+        socket.syncUpdates('service', $scope.gridOptions.data,function(event,item,arr){
+          if (item._id == $scope.navigateToId && $scope.gridApi){
+            $timeout(function(){
+              var entity = _.findLast(arr,function(i){ return i._id==$scope.navigateToId});
+              $scope.gridApi.core.scrollTo(entity);
+              $scope.gridApi.selection.toggleRowSelection(entity);
+            },100)
+          }
+        });
       });
 
       $scope.$on('$destroy', function() {
