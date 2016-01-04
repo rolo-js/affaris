@@ -9,9 +9,10 @@ angular.module('affarisApp.translate', [
       'es-MX': 'Español',
       'en-US': 'English'
     },
-    'preferredLocale': 'es_MX'
+    'preferredLocale': 'es-MX'
   })
   .config(function($translateProvider, tmhDynamicLocaleProvider) {
+
     //$translateProvider.useSanitizeValueStrategy('sanitize'); // Se quito porque estaba escapando los acentos
     $translateProvider.useMissingTranslationHandlerLog();
     $translateProvider.useStaticFilesLoader({
