@@ -1,2 +1,7 @@
 div This is the detail view. 
   h1 {{message}}
+br
+br
+div#tree-root(ui-tree="")
+  ol(ui-tree-nodes="",ng-model="data")
+    li(ng-repeat="node in data",ui-tree-node,ng-include="'components/tree/noderenderer.html'")

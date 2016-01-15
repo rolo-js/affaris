@@ -1,0 +1,10 @@
+div.tree-node.tree-node-content.af-file-item(data-nodrag,ng-click="sd.toggle(this)")
+  i.fa(ng-class="sd.getIcon(node,collapsed)") 
+  span {{node.title}}
+  a.pull-right.btn.btn-danger.btn-xs.tool(data-nodrag="",ng-click="sd.remove(this)")
+    span.glyphicon.glyphicon-remove
+  a.pull-right.btn.btn-primary.btn-xs.tool(data-nodrag="",ng-click="sd.newSubItem(this)",style="margin-right:8px")
+    span.glyphicon.glyphicon-plus
+ol(ui-tree-nodes="",ng-model="node.nodes",ng-class="{hidden:collapsed}")
+  li(ng-repeat="node in node.nodes",ui-tree-node,ng-include="'components/tree/noderenderer.html'")
+ 

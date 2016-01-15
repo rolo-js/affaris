@@ -6,6 +6,7 @@ angular.module('affarisApp')
       .state('service.detail', {
         url: '/detail/:id',
         templateUrl: 'app/catalogs/service/detail/detail.html',
-        controller: 'ServiceDetailCtrl'
+        controller: 'ServiceDetailCtrl',
+        controllerAs:'sd'
       });
   });

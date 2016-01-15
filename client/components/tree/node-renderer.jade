@@ -1,0 +1,11 @@
+div.tree-node.tree-node-content(ui-tree-handle)
+  a.btn.btn-success btn-xs(ng-if="node.nodes && node.nodes.length > 0", nodrag,ng-click(toggle(this)))
+    span.glyphicon(ng-class="{'glyphicon-chevron-right': collapsed,'glyphicon-chevron-down': !collapsed}") 
+  | {{node.title}}
+  a.pull-right.btn.btn-danger.btn-xs(nodrag,ng-click="remove(this)")
+    span.glyphicon.glyphicon-remove
+  a.pull-right.btn-primary.btn-xs(nodrag,ng-click="newSubItem(this)",style="margin-right:8px")
+    span.glyphicon.glyphicon-plus
+ol(ui-tree-nodes="",ng-model="node.nodes",ng-class="{hidden:collapsed}")
+  li(ng-repeat="node in node.nodes",ui-tree-node,ng-include="'components/tree/nodesrenderer.html'")
+ 
