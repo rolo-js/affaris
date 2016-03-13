@@ -1,71 +1,75 @@
 'use strict';
 
 angular.module('affarisApp.translate')
-  .service('LocaleService', function ($translate, LOCALES, $rootScope, tmhDynamicLocale) {
-// PREPARING LOCALES INFO
-        var localesObj = LOCALES.locales;
+  .service('LocaleService', function($translate, LOCALES, $rootScope, tmhDynamicLocale) {
 
-        // locales and locales display names
-        var _LOCALES = Object.keys(localesObj);
-        if (!_LOCALES || _LOCALES.length === 0) {
-          console.error('There are no _LOCALES provided');
-        }
-        var _LOCALES_DISPLAY_NAMES = [];
-        _LOCALES.forEach(function (locale) {
-          _LOCALES_DISPLAY_NAMES.push(localesObj[locale]);
-        });
+    // PREPARING LOCALES INFO
+    var localesObj = LOCALES.locales;
 
-        // STORING CURRENT LOCALE
-        var currentLocale = $translate.proposedLanguage();// because of async loading
-        var currentKey = $translate.use();
-        currentLocale = currentKey;
+    // locales and locales display names
+    var _LOCALES = Object.keys(localesObj);
+    if (!_LOCALES || _LOCALES.length === 0) {
+      console.error('There are no _LOCALES provided');
+    }
+    var _LOCALES_DISPLAY_NAMES = [];
+    _LOCALES.forEach(function(locale) {
+      _LOCALES_DISPLAY_NAMES.push(localesObj[locale]);
+    });
 
 
-        // METHODS
-        var checkLocaleIsValid = function (locale) {
-          return _LOCALES.indexOf(locale) !== -1;
-        };
+    // METHODS
+    var checkLocaleIsValid = function(locale) {
+      return _LOCALES.indexOf(locale) !== -1;
+    };
 
-        var setLocale = function (locale) {
-          if (!checkLocaleIsValid(locale)) {
-            console.error('Locale name "' + locale + '" is invalid');
-            return;
-          }
-          currentLocale = locale;// updating current locale
+    var setLocale = function(locale) {
+      if (!checkLocaleIsValid(locale)) {
+        console.error('Locale name "' + locale + '" is invalid');
+        return;
+      }
+      currentLocale = locale; // updating current locale
+      // asking angular-translate to load and apply proper translations
+      $translate.use(locale);
+    };
 
-          // asking angular-translate to load and apply proper translations
-          $translate.use(locale);
-        };
+    // STORING CURRENT LOCALE
+    var currentDisplayName;
+    var currentLocale;
+    $translate.onReady(function(){
+      currentLocale = $translate.use();
+      if (checkLocaleIsValid(currentLocale)){
+        currentDisplayName = _LOCALES_DISPLAY_NAMES[_LOCALES.indexOf(currentLocale) ];
+      }
+    });
 
-        // if (checkLocaleIsValid(currentKey)){
-        //   currentLocale = _LOCALES_DISPLAY_NAMES[_LOCALES.indexOf(currentKey) ];
-        // }
 
-        // EVENTS
-        // on successful applying translations by angular-translate
-        $rootScope.$on('$translateChangeSuccess', function (event, data) {
-          document.documentElement.setAttribute('lang', data.language);// sets "lang" attribute to html
 
-           // asking angular-dynamic-locale to load and apply proper AngularJS $locale setting
-          tmhDynamicLocale.set(data.language.toLowerCase().replace(/_/g, '-'));
-        });
 
-        return {
-          getLocaleDisplayName: function () {
-            return localesObj[currentLocale];
-          },
-          getCurrentLanguage: function(){
-            return $translate.use();
-          },
-          setLocaleByDisplayName: function (localeDisplayName) {
-            setLocale(
-              _LOCALES[
-                _LOCALES_DISPLAY_NAMES.indexOf(localeDisplayName)// get locale index
-                ]
-            );
-          },
-          getLocalesDisplayNames: function () {
-            return _LOCALES_DISPLAY_NAMES;
-          }
-        };
+    // EVENTS
+    // on successful applying translations by angular-translate
+    $rootScope.$on('$translateChangeSuccess', function(event, data) {
+      document.documentElement.setAttribute('lang', data.language); // sets "lang" attribute to html
+
+      // asking angular-dynamic-locale to load and apply proper AngularJS $locale setting
+      tmhDynamicLocale.set(data.language.toLowerCase().replace(/_/g, '-'));
+    });
+
+    return {
+      getLocaleDisplayName: function() {
+        return localesObj[currentLocale];
+      },
+      getCurrentLanguage: function() {
+        return $translate.use();
+      },
+      setLocaleByDisplayName: function(localeDisplayName) {
+        setLocale(
+          _LOCALES[
+            _LOCALES_DISPLAY_NAMES.indexOf(localeDisplayName) // get locale index
+          ]
+        );
+      },
+      getLocalesDisplayNames: function() {
+        return _LOCALES_DISPLAY_NAMES;
+      }
+    };
   });

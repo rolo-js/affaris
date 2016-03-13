@@ -1,2 +1,13 @@
-div This is the detail view. 
-  h1 {{message}}
+h1
+  | {{svc.code}}
+  small 
+    | {{svc.name}}
+ul.nav.nav-pills
+  li(ui-sref-active="active")
+    a(ui-sref="service.detail.info") {{"Servicio" | translate}}
+  li(ui-sref-active="active")
+    a(ui-sref="service.detail.docsProject") {{"Documentos Proyecto" | translate }}
+  li(ui-sref-active="active")
+    a(ui-sref="service.detail.docsProposal") {{"Documentos Propuesta" | translate }}
+div.view-wrapper
+  div(ui-view="")

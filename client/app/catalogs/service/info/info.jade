@@ -1,0 +1,23 @@
+.row
+  .col-sm-6
+    form(novalidate,name="sif")
+      div.panel.panel-default
+        div.panel-heading 
+          |{{ 'General' | translate }}
+          button.btn.btn-success.btn-xs.pull-right(ng-show="sif.$dirty",ng-disabled="sif.$invalid",ng-click="svcCtrl.save(sif)")
+            i.fa.fa-save.fa-fw
+        div.panel-body
+          div.form-group(ng-class="{'has-error': sif.sifCode.$dirty && sif.sifCode.$invalid,'dirty':sif.sifCode.$dirty}")
+            label(for="sifCode") {{'Código' | translate}}
+            input.form-control(type="text",id="sifCode",name="sifCode",required,readonly,
+              ng-model="svc.code")
+          div.form-group(ng-class="{'has-error': sif.sifName.$dirty && sif.sifName.$invalid,'dirty':sif.sifName.$dirty}")
+            label(for="sifName") {{'Nombre' | translate}}
+            input.form-control(type="text",id="sifName",name="sifName",required,
+              ng-model="svc.name")
+            p(ng-show="sif.sifName.$dirty && sif.sifName.$error.required" class="help-block") 
+              | {{'El nombre es requerido.' | translate}}
+          div.form-group(ng-class="{'has-error': sif.sifInfo.$dirty && sif.sifInfo.$invalid,'dirty':sif.sifInfo.$dirty}")
+            label(for="sifInfo") {{'Descripción' | translate}}
+            textarea.form-control(rows="3",id="sifInfo",name="sifInfo",
+              ng-model="svc.info")

@@ -5,14 +5,24 @@ angular.module('affarisApp')
     $stateProvider
       .state('service', {
         url: '/service',
-        template: '<ui-view></ui-view>',
-        controller: 'ServiceCtrl',
+        views:{
+          '@':{
+            templateUrl:'app/catalogs/service/service.html',
+            controller: 'ServiceCtrl',
+            controllerAs: 'services'
+          }
+        },
         deepStateRedirect: {default:'service.dash'},
         sticky:true
       })
       .state('service.dash',{
-        url: '/dash/:id',
-        templateUrl:'app/catalogs/service/service.html',
+        url: '/dash',
+        templateUrl:'app/catalogs/service/dash/dash.html',
+        params:{
+          gotoId:{ value:'', squash:true}
+        },
+        controller:'ServiceDashCtrl',
+        controllerAs:'servicedash',
         sticky:true,
         resolve:{
           $title: function($translate) {

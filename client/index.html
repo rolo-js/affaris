@@ -16,6 +16,7 @@
     <!-- build:css(client) app/vendor.css -->
       <!-- bower:css -->
       <link rel="stylesheet" href="bower_components/angular-ui-grid/ui-grid.css" />
+      <link rel="stylesheet" href="bower_components/angular-ui-tree/dist/angular-ui-tree.min.css" />
       <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css({.tmp,client}) app/app.css -->
@@ -69,6 +70,7 @@
       <script src="bower_components/angular-ui-router-title/angular-ui-router-title.js"></script>
       <script src="bower_components/angular-ui-grid/ui-grid.js"></script>
       <script src="bower_components/angular-animate/angular-animate.js"></script>
+      <script src="bower_components/angular-ui-tree/dist/angular-ui-tree.js"></script>
       <!-- endbower -->
       <script src="socket.io-client/socket.io.js"></script>
     <!-- endbuild -->
@@ -79,27 +81,35 @@
       <script src="components/auth/auth.module.js"></script>
       <script src="components/translate/translate.module.js"></script>
       <script src="components/util/util.module.js"></script>
-      <script src="app/project/project.js"></script>
+      <script src="app/project/project.controller.js"></script>
       <script src="app/account/account.js"></script>
       <script src="app/admin/admin.router.js"></script>
       <script src="app/app.constant.js"></script>
       <script src="app/catalogs/service/create/create.controller.js"></script>
       <script src="app/catalogs/service/create/create.js"></script>
+      <script src="app/catalogs/service/dash/dash.controller.js"></script>
       <script src="app/catalogs/service/detail/detail.controller.js"></script>
       <script src="app/catalogs/service/detail/detail.js"></script>
+      <script src="app/catalogs/service/docs/docs.controller.js"></script>
+      <script src="app/catalogs/service/docs/docs.js"></script>
+      <script src="app/catalogs/service/info/info.controller.js"></script>
+      <script src="app/catalogs/service/info/info.js"></script>
       <script src="app/catalogs/service/service.controller.js"></script>
       <script src="app/catalogs/service/service.js"></script>
       <script src="app/catalogs/service/service.service.js"></script>
       <script src="app/catalogs/service/uniqServiceCode/uniqServiceCode.directive.js"></script>
       <script src="app/main/main.controller.js"></script>
       <script src="app/main/main.js"></script>
-      <script src="app/project/project.controller.js"></script>
       <script src="app/account/login/login.controller.js"></script>
+      <script src="app/project/project.js"></script>
+      <script src="components/Doc/Doc.service.js"></script>
       <script src="app/account/settings/settings.controller.js"></script>
       <script src="components/auth/auth.service.js"></script>
       <script src="components/auth/interceptor.service.js"></script>
       <script src="components/auth/router.decorator.js"></script>
       <script src="components/auth/user.service.js"></script>
+      <script src="components/file-nav/file-nav.controller.js"></script>
+      <script src="components/file-nav/file-nav.directive.js"></script>
       <script src="components/footer/footer.directive.js"></script>
       <script src="components/modal/modal.service.js"></script>
       <script src="components/mongoose-error/mongoose-error.directive.js"></script>

@@ -17,7 +17,8 @@ angular.module('affarisApp', [
   'ngAnimate',
   'ui.grid',
   'ui.grid.selection',
-  'ui.grid.saveState'
+  'ui.grid.saveState',
+  'ui.tree'
 ])
   .config(function($urlRouterProvider, $locationProvider) {
     $urlRouterProvider

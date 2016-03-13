@@ -1,13 +1,13 @@
 'use strict';
 (function() {
 
-class ServiceDetailCtrl {
-  constructor($scope, $stateParams) {
-    $scope.message = $stateParams.id;
+  class ServiceDetailCtrl {
+    constructor($scope, $stateParams,currentService) {
+      $scope.svc = currentService;
+    }
   }
-}
 
-angular.module('affarisApp')
-  .controller('ServiceDetailCtrl', ServiceDetailCtrl);
+  angular.module('affarisApp')
+    .controller('ServiceDetailCtrl', ServiceDetailCtrl);
 
 })();

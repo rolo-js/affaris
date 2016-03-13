@@ -21,10 +21,15 @@
   "Crear": "Crear",
   "Nuevo":"Nuevo",
   "Nombre":"Nombre",
-    
+  "General":"General",
+
   "Tokens.Servicio":"***********************",
   "Código":"Código",
   "Servicio":"Servicio",
-  "Crear nuevo servicio":"Crear nuevo servicio"
-
+  "Crear nuevo servicio":"Crear nuevo servicio",
+  "El código es requerido." : "El código es requerido.",
+  "El nombre es requerido." : "El nombre es requerido.",
+  "Descripción" : "Descripción",
+  "Documentos Proyecto": "Documentos Proyecto",
+  "Documentos Propuesta":"Documentos Propuesta"
 }
