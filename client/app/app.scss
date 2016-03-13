@@ -11,7 +11,7 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
 body{
   font-family:"Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #E2E2E7;
-  padding-top: 90px;
+  padding-top: 50px;
 }
 
 	*::-webkit-scrollbar {
@@ -55,7 +55,7 @@ ui-view.ng-enter, ui-view.ng-leave ,
   position: absolute;
   left: 0;
   right: 0;
-  transition: all 0.15s ease-out;
+  transition: all 0.1s ease-out;
 }
 ui-view.ng-enter ,
 [ui-view].ng-enter {
@@ -89,9 +89,11 @@ ui-view.ng-leave-active,
 @import 'admin/admin.scss';
 @import 'catalogs/service/create/create.scss';
 @import 'catalogs/service/detail/detail.scss';
+@import 'catalogs/service/docs/docs.scss';
 @import 'catalogs/service/service.scss';
 @import 'main/main.scss';
 @import 'project/project.scss';
+@import '../components/file-nav/file-nav.scss';
 @import '../components/footer/footer.scss';
 @import '../components/modal/modal.scss';
 @import '../components/oauth-buttons/oauth-buttons.scss';

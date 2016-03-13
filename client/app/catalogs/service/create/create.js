@@ -16,11 +16,14 @@ angular.module('affarisApp')
                 modalInstance.result
                 .then(function(svc){
                   $state.go('service.dash',{ gotoId: svc._id});
-                });
-        }],
+                },function () {
+                  $state.go('service.dash');
+                })
+              }],
         onExit:['$state',function($state){
           if (modalInstance)
             modalInstance.close();
+
         }]
     });
   });

@@ -1,7 +1,13 @@
-div This is the detail view. 
-  h1 {{message}}
-br
-br
-div#tree-root(ui-tree="")
-  ol(ui-tree-nodes="",ng-model="data")
-    li(ng-repeat="node in data",ui-tree-node,ng-include="'components/tree/noderenderer.html'")
+h1
+  | {{svc.code}}
+  small 
+    | {{svc.name}}
+ul.nav.nav-pills
+  li(ui-sref-active="active")
+    a(ui-sref="service.detail.info") {{"Servicio" | translate}}
+  li(ui-sref-active="active")
+    a(ui-sref="service.detail.docsProject") {{"Documentos Proyecto" | translate }}
+  li(ui-sref-active="active")
+    a(ui-sref="service.detail.docsProposal") {{"Documentos Propuesta" | translate }}
+div.view-wrapper
+  div(ui-view="")

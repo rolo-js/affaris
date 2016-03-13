@@ -21,10 +21,16 @@
   "Crear": "Create",
   "Nuevo":"New",
   "Nombre":"Name",
+  "General":"General",
 
   "Tokens.Servicio":"***********************",
   "Código":"Code",
   "Servicio":"Service",
-  "Crear nuevo servicio":"Create new service"
+  "Crear nuevo servicio":"Create new service",
+  "El código es requerido." : "Code is required.",
+  "El nombre es requerido." : "Name is required.",
+  "Descripción" : "Description",
+  "Documentos Proyecto": "Project Documents",
+  "Documentos Propuesta":"Proposal Documents"
 
 }
